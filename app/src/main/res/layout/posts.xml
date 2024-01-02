@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/white"
+    android:padding="6dp"
  >
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -146,7 +147,10 @@
         android:layout_marginTop="5dp"
         android:weightSum="3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/like">
+        app:layout_constraintTop_toBottomOf="@id/like"
+        app:layout_constraintEnd_toEndOf="parent"
+
+      >
 
         <ImageView
             android:id="@+id/like_icon"
