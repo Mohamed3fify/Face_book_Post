@@ -154,8 +154,8 @@
 
         <ImageView
             android:id="@+id/like_icon"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="5dp"
             android:src="@drawable/like1" />
@@ -169,7 +169,7 @@
             android:backgroundTint="#00FFFFFF"
             android:text="Like"
             android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
         <ImageView
             android:id="@+id/comment_icon"

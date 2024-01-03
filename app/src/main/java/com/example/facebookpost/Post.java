@@ -26,7 +26,7 @@ public class Post extends AppCompatActivity {
         recyclerViewPost = binding.recyclePost;
         createContactList();
         adapter =new PostsRecycleAdapter(postList);
-       recyclerViewPost.setAdapter(adapter);
+        recyclerViewPost.setAdapter(adapter);
     }
 
     private void createContactList() {
