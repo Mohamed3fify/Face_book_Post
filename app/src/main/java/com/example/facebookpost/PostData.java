@@ -1,6 +1,6 @@
 package com.example.facebookpost;
 
-public class Posts { // data class
+public class PostData { // data class
     int pageImg;
     int worldWide;
     int postImg;
@@ -20,10 +20,10 @@ public class Posts { // data class
     String commentBtn;
     String shareBtn;
 
- public Posts(int pageImg, int worldWide, int postImg, int likeCountIcon, int shareCountImg,
-              int likeIcon, int commentIcon, int shareIcon, String postTime, String pageName,
-              String detailsBtn, String post, String likeCount, String shareCount, String likeBtn,
-              String commentBtn, String shareBtn) {
+ public PostData(int pageImg, int worldWide, int postImg, int likeCountIcon, int shareCountImg,
+                 int likeIcon, int commentIcon, int shareIcon, String postTime, String pageName,
+                 String detailsBtn, String post, String likeCount, String shareCount, String likeBtn,
+                 String commentBtn, String shareBtn) {
   this.pageImg = pageImg;
   this.worldWide = worldWide;
   this.postImg = postImg;

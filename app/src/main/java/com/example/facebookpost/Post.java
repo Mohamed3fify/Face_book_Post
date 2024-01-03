@@ -15,7 +15,7 @@ public class Post extends AppCompatActivity {
     ActivityPostBinding binding;
     RecyclerView recyclerViewPost;
     PostsRecycleAdapter adapter;
-    List<Posts> postList;
+    List<PostData> postList;
 
 
     @Override
@@ -32,7 +32,7 @@ public class Post extends AppCompatActivity {
     private void createContactList() {
         postList = new ArrayList<>(200);
         for (int i=0; i<200; i++){
-            postList.add(new Posts(R.drawable.splash_screen , R.drawable.worldwide ,R.drawable.android_studio,
+            postList.add(new PostData(R.drawable.splash_screen , R.drawable.worldwide ,R.drawable.android_studio,
                    R.drawable.like_icon2,R.drawable.splash_screen,R.drawable.like1 ,R.drawable.comment,R.drawable.share,
                     "2 hrs" , "Route" , "..." , "Check this link for android course details\n" +
                     "https://www.linkedin.com/company/routeacademy/" , "12",

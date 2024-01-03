@@ -14,42 +14,42 @@ import java.util.List;
 
 public class PostsRecycleAdapter extends RecyclerView.Adapter<PostsRecycleAdapter.ViewHolder> {
 
-    List<Posts> item;
+    List<PostData> item;
 
-    public PostsRecycleAdapter(List<Posts> item) {
+    public PostsRecycleAdapter(List<PostData> item) {
         this.item = item;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.posts,parent,false);
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.post_data, parent, false);
         return new ViewHolder(itemView);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        Posts posts = item.get(position);
-        holder.pageImg.setImageResource(posts.pageImg);
-        holder.postImg.setImageResource(posts.postImg);
-        holder.worldWide.setImageResource(posts.worldWide);
-        holder.likeCountIcon.setImageResource(posts.likeCountIcon);
-        holder.shareCountImg.setImageResource(posts.shareCountImg);
-        holder.likeIcon.setImageResource(posts.likeIcon);
-        holder.commentIcon.setImageResource(posts.commentIcon);
-        holder.shareIcon.setImageResource(posts.shareIcon);
+        PostData postData = item.get(position);
+        holder.pageImg.setImageResource(postData.pageImg);
+        holder.postImg.setImageResource(postData.postImg);
+        holder.worldWide.setImageResource(postData.worldWide);
+        holder.likeCountIcon.setImageResource(postData.likeCountIcon);
+        holder.shareCountImg.setImageResource(postData.shareCountImg);
+        holder.likeIcon.setImageResource(postData.likeIcon);
+        holder.commentIcon.setImageResource(postData.commentIcon);
+        holder.shareIcon.setImageResource(postData.shareIcon);
         //====================
-        holder.pageName.setText(posts.pageName);
-        holder.postTime.setText(posts.postTime);
-        holder.post.setText(posts.post);
-        holder.likeCount.setText(posts.likeCount);
-        holder.shareCount.setText(posts.shareCount);
+        holder.pageName.setText(postData.pageName);
+        holder.postTime.setText(postData.postTime);
+        holder.post.setText(postData.post);
+        holder.likeCount.setText(postData.likeCount);
+        holder.shareCount.setText(postData.shareCount);
         //===================
-        holder.detailsBtn.setText(posts.detailsBtn);
-        holder.likeBtn.setText(posts.likeBtn);
-        holder.commentBtn.setText(posts.commentBtn);
-        holder.shareBtn.setText(posts.shareBtn);
+        holder.detailsBtn.setText(postData.detailsBtn);
+        holder.likeBtn.setText(postData.likeBtn);
+        holder.commentBtn.setText(postData.commentBtn);
+        holder.shareBtn.setText(postData.shareBtn);
 
     }
 
@@ -60,16 +60,17 @@ public class PostsRecycleAdapter extends RecyclerView.Adapter<PostsRecycleAdapte
         return item.size();
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder{
+    static class ViewHolder extends RecyclerView.ViewHolder {
         ImageView pageImg, worldWide, postImg, likeCountIcon, shareCountImg, likeIcon, commentIcon, shareIcon;
-        TextView pageName , postTime, post ,likeCount , shareCount;
-        Button detailsBtn , likeBtn , commentBtn ,shareBtn;
+        TextView pageName, postTime, post, likeCount, shareCount;
+        Button detailsBtn, likeBtn, commentBtn, shareBtn;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             // Img and icons
-           pageImg = itemView.findViewById(R.id.page_img);
-           worldWide = itemView.findViewById(R.id.world_wide);
-           postImg = itemView.findViewById(R.id.post_image);
+            pageImg = itemView.findViewById(R.id.page_img);
+            worldWide = itemView.findViewById(R.id.world_wide);
+            postImg = itemView.findViewById(R.id.post_image);
             likeCountIcon = itemView.findViewById(R.id.like);
             shareCountImg = itemView.findViewById(R.id.share_image);
             likeIcon = itemView.findViewById(R.id.like_icon);
